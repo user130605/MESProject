@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.Facility = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -37,9 +40,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btn_register_F = new System.Windows.Forms.Button();
             this.btn_edit_F = new System.Windows.Forms.Button();
-            this.Grid_FM = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.Grid_FM = new MetroFramework.Controls.MetroGrid();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid_FM)).BeginInit();
@@ -157,16 +160,6 @@
             this.btn_edit_F.UseVisualStyleBackColor = true;
             this.btn_edit_F.Click += new System.EventHandler(this.btn_edit_F_Click);
             // 
-            // Grid_FM
-            // 
-            this.Grid_FM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grid_FM.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Grid_FM.Location = new System.Drawing.Point(3, 22);
-            this.Grid_FM.Name = "Grid_FM";
-            this.Grid_FM.RowHeadersWidth = 51;
-            this.Grid_FM.Size = new System.Drawing.Size(1163, 502);
-            this.Grid_FM.TabIndex = 2;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -188,6 +181,52 @@
             this.comboBox4.Size = new System.Drawing.Size(142, 23);
             this.comboBox4.TabIndex = 15;
             // 
+            // Grid_FM
+            // 
+            this.Grid_FM.AllowUserToResizeRows = false;
+            this.Grid_FM.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Grid_FM.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Grid_FM.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.Grid_FM.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid_FM.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Grid_FM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Grid_FM.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Grid_FM.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Grid_FM.EnableHeadersVisualStyles = false;
+            this.Grid_FM.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Grid_FM.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Grid_FM.Location = new System.Drawing.Point(3, 22);
+            this.Grid_FM.Name = "Grid_FM";
+            this.Grid_FM.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid_FM.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Grid_FM.RowHeadersWidth = 51;
+            this.Grid_FM.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.Grid_FM.RowTemplate.Height = 27;
+            this.Grid_FM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Grid_FM.Size = new System.Drawing.Size(1163, 502);
+            this.Grid_FM.TabIndex = 3;
+            // 
             // FacilityManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -196,7 +235,7 @@
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "FacilityManage";
-            this.Text = "FacilityManage";
+            this.Text = "설비자산관리";
             this.Load += new System.EventHandler(this.FacilityManage_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -217,8 +256,8 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label WorkPlace;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView Grid_FM;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox4;
+        private MetroFramework.Controls.MetroGrid Grid_FM;
     }
 }

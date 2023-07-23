@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PopupList
+namespace FormList
 {
-    public partial class Facility_edit : MetroFramework.Forms.MetroForm
+    public partial class Hello : Form
     {
-        public Facility_edit()
+        public Hello()
         {
             InitializeComponent();
         }

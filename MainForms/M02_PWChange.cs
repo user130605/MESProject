@@ -12,7 +12,7 @@ using Services;
 
 namespace MainForms
 {
-    public partial class M02_PWChange : Form
+    public partial class M02_PWChange : MetroFramework.Forms.MetroForm
     {
         public M02_PWChange()
         {

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PopupList
 {
-    public partial class WorkSend_edit : Form
+    public partial class WorkSend_edit : MetroFramework.Forms.MetroForm
     {
         public WorkSend_edit()
         {

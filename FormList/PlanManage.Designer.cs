@@ -33,9 +33,18 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox1.Size = new System.Drawing.Size(885, 138);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.myCalendar);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox2.Size = new System.Drawing.Size(885, 524);
             // 
             // label1
             // 
@@ -59,7 +68,8 @@
             this.myCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.myCalendar.HighlightCurrentDay = true;
             this.myCalendar.LoadPresetHolidays = true;
-            this.myCalendar.Location = new System.Drawing.Point(3, 17);
+            this.myCalendar.Location = new System.Drawing.Point(3, 23);
+            this.myCalendar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.myCalendar.Name = "myCalendar";
             this.myCalendar.ShowArrowControls = true;
             this.myCalendar.ShowDashedBorderOnDisabledEvents = true;
@@ -67,18 +77,20 @@
             this.myCalendar.ShowDisabledEvents = false;
             this.myCalendar.ShowEventTooltips = true;
             this.myCalendar.ShowTodayButton = true;
-            this.myCalendar.Size = new System.Drawing.Size(794, 320);
+            this.myCalendar.Size = new System.Drawing.Size(879, 496);
             this.myCalendar.TabIndex = 0;
             this.myCalendar.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             // 
             // PlanManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(885, 662);
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "PlanManage";
-            this.Text = "PlanManage";
+            this.Text = "스케쥴 관리";
+            this.Load += new System.EventHandler(this.PlanManage_Load);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 

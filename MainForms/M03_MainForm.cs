@@ -1,4 +1,5 @@
 ﻿using FormList;
+using Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ using System.Windows.Forms;
 
 namespace MainForms
 {
-    public partial class M03_MainForm : Form
+    public partial class M03_MainForm : MetroFramework.Forms.MetroForm
     {
         Thread thread_NowDate;
 
@@ -48,17 +49,22 @@ namespace MainForms
 
             //2-3. 스레드 시작.
             thread_NowDate.Start();
+
+            Hello welcome = new Hello();
+
+            //추출한 클래스를 Form 형식으로 만든후 TabControl에 추가.
+            tabMyTab.AddForm(welcome);
         }
         #endregion
 
         #region <Thread Method>
-        private void timNowDate_Tick(object sender, EventArgs e)
-        {
-            //Timer 이용한 방법.
-            //Interval 1000 (1초간격으로 실행할로직)
-            //현재 일시를 나타내기.
-            stsNowDate.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-        }
+        //private void timNowDate_Tick(object sender, EventArgs e)
+        //{
+        //    //Timer 이용한 방법.
+        //    //Interval 1000 (1초간격으로 실행할로직)
+        //    //현재 일시를 나타내기.
+        //    stsNowDate.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        //}
 
         private void TimeShow()
         {
@@ -75,8 +81,10 @@ namespace MainForms
         #region <종료 버튼 클릭>
         private void btnExit_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            Application.Exit(); //응용프로그램의 종료
+            Commons.bloginFlag = true;  //무한루프 벗어나기위한 로그인플래그
+            this.Close();
+
+            //Application.Exit(); //응용프로그램의 종료
         }
 
         private void M03_MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -88,6 +96,11 @@ namespace MainForms
             {
                 e.Cancel= true;
                 return;
+            }
+
+            else if (Result == DialogResult.Yes)
+            {
+                Tag = true;
             }
             //2. 프로그램 종료여부의 결과가 Yes 인경우.
             // 구동 되고 있는 스레드를 종료. 
@@ -171,6 +184,7 @@ namespace MainForms
                 {
                     //탭페이지의 이름과 메뉴의 이름이 같다 (등록된페이지를 활성화)
                     tabMyTab.SelectedTab = tabMyTab.TabPages[i];
+                    stsFormName.Text = tabMyTab.SelectedTab.Text;
                     return;
                 }
             }
@@ -190,6 +204,7 @@ namespace MainForms
 
             //추출한 클래스를 Form 형식으로 만든후 TabControl에 추가.
             tabMyTab.AddForm(ShowForm);
+            stsFormName.Text = tabMyTab.SelectedTab.Text;
         }
 
         private void PlanManage_Click(object sender, EventArgs e)
@@ -200,6 +215,7 @@ namespace MainForms
                 {
                     //탭페이지의 이름과 메뉴의 이름이 같다 (등록된페이지를 활성화)
                     tabMyTab.SelectedTab = tabMyTab.TabPages[i];
+                    stsFormName.Text = tabMyTab.SelectedTab.Text;
                     return;
                 }
             }
@@ -219,6 +235,7 @@ namespace MainForms
 
             //추출한 클래스를 Form 형식으로 만든후 TabControl에 추가.
             tabMyTab.AddForm(ShowForm);
+            stsFormName.Text = tabMyTab.SelectedTab.Text;
         }
 
         private void RealTimeMonitor_Click(object sender, EventArgs e)
@@ -229,6 +246,7 @@ namespace MainForms
                 {
                     //탭페이지의 이름과 메뉴의 이름이 같다 (등록된페이지를 활성화)
                     tabMyTab.SelectedTab = tabMyTab.TabPages[i];
+                    stsFormName.Text = tabMyTab.SelectedTab.Text;
                     return;
                 }
             }
@@ -248,6 +266,7 @@ namespace MainForms
 
             //추출한 클래스를 Form 형식으로 만든후 TabControl에 추가.
             tabMyTab.AddForm(ShowForm);
+            stsFormName.Text = tabMyTab.SelectedTab.Text;
         }
 
         private void FacilityManage_Click(object sender, EventArgs e)
@@ -258,6 +277,7 @@ namespace MainForms
                 {
                     //탭페이지의 이름과 메뉴의 이름이 같다 (등록된페이지를 활성화)
                     tabMyTab.SelectedTab = tabMyTab.TabPages[i];
+                    stsFormName.Text = tabMyTab.SelectedTab.Text;
                     return;
                 }
             }
@@ -277,6 +297,7 @@ namespace MainForms
 
             //추출한 클래스를 Form 형식으로 만든후 TabControl에 추가.
             tabMyTab.AddForm(ShowForm);
+            stsFormName.Text = tabMyTab.SelectedTab.Text;
         }
 
         private void FacilityWarning_Click(object sender, EventArgs e)
@@ -287,6 +308,7 @@ namespace MainForms
                 {
                     //탭페이지의 이름과 메뉴의 이름이 같다 (등록된페이지를 활성화)
                     tabMyTab.SelectedTab = tabMyTab.TabPages[i];
+                    stsFormName.Text = tabMyTab.SelectedTab.Text;
                     return;
                 }
             }
@@ -306,6 +328,15 @@ namespace MainForms
 
             //추출한 클래스를 Form 형식으로 만든후 TabControl에 추가.
             tabMyTab.AddForm(ShowForm);
+
+            stsFormName.Text = tabMyTab.SelectedTab.Text;
+        }
+
+ 
+
+        private void tabMyTab_Click(object sender, EventArgs e)
+        {
+            stsFormName.Text = tabMyTab.SelectedTab.Text;
         }
     }
 }

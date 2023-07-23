@@ -22,8 +22,9 @@ using System.Threading.Tasks;
         //응용프로그램 실행시 최초 1회 초기화 할 때 DATA 영역에 등록이 되어 
         //응용프로그램이 종료 될때까지 상주해 있도록 하는 키워드
         //const 는 기본적으로 static 속성을 가지고있음.
-        public const string Sconnection = "Server = PC-094\\MSSQLSERVER01; Uid = sa; Pwd = 1234; database = AppDev;";
+        public const string Sconnection =  "Server = PC-094\\MSSQLSERVER01; Uid = sa; Pwd = 1234; database = AppDev;";
 
+        public const string DbPath = "Data Source=222.235.141.8,1111; Initial Catalog=GNU23_02;User ID=GNU2302;Password=1234; database = GNU23_02";
         public static bool bloginFlag = false;
     }
 }

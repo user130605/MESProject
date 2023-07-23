@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -9,7 +10,7 @@ using System.Windows.Forms;
 namespace Services
 {
     //사용자 정의 컨트롤
-    public class MyTabControl : TabControl
+    public class MyTabControl : MetroTabControl
     {
         //클래스의 상속
         //생성 되어있는 클래스의 기능을 그대로 물려받고

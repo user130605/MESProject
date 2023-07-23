@@ -31,9 +31,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Infragistics2.Shared.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.Misc.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -55,6 +68,12 @@
     <Compile Include="FacilityWarning.Designer.cs">
       <DependentUpon>FacilityWarning.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hello.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hello.Designer.cs">
+      <DependentUpon>Hello.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItemMaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,10 +83,15 @@
     <Compile Include="PlanManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlanManage.Designer.cs">
+    <Compile Include="PlanManage.designer.cs">
       <DependentUpon>PlanManage.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RealTimeMonitor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,11 +132,19 @@
     <EmbeddedResource Include="FacilityWarning.resx">
       <DependentUpon>FacilityWarning.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Hello.resx">
+      <DependentUpon>Hello.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItemMaster.resx">
       <DependentUpon>ItemMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlanManage.resx">
       <DependentUpon>PlanManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RealTimeMonitor.resx">
       <DependentUpon>RealTimeMonitor.cs</DependentUpon>
@@ -123,6 +155,12 @@
     <EmbeddedResource Include="WorkSend.resx">
       <DependentUpon>WorkSend.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sub040602_top.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

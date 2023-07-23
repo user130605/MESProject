@@ -13,7 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PopupList
 {
-    public partial class Facility_register : Form
+    public partial class Facility_register : MetroFramework.Forms.MetroForm
     {
         DataTable dtTemp = new DataTable();
 

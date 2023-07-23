@@ -186,7 +186,7 @@
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "WorkSend";
-            this.Text = "WorkSend";
+            this.Text = "작업지시";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
