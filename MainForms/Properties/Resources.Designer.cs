@@ -163,6 +163,16 @@ namespace MainForms.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap desktop_wallpaper_website_backgrounds_login_page1 {
+            get {
+                object obj = ResourceManager.GetObject("desktop-wallpaper-website-backgrounds-login-page1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap outline_add_black_24dp {
             get {
                 object obj = ResourceManager.GetObject("outline_add_black_24dp", resourceCulture);
@@ -173,9 +183,29 @@ namespace MainForms.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap outline_check_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_check_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap outline_close_black_24dp {
             get {
                 object obj = ResourceManager.GetObject("outline_close_black_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap outline_content_paste_go_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_content_paste_go_white_24dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,6 +233,16 @@ namespace MainForms.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap outline_done_all_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_done_all_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap outline_login_black_24dp {
             get {
                 object obj = ResourceManager.GetObject("outline_login_black_24dp", resourceCulture);
@@ -223,6 +263,16 @@ namespace MainForms.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap outline_login_white_24dp1 {
+            get {
+                object obj = ResourceManager.GetObject("outline_login_white_24dp1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap outline_logout_black_24dp {
             get {
                 object obj = ResourceManager.GetObject("outline_logout_black_24dp", resourceCulture);
@@ -233,9 +283,59 @@ namespace MainForms.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap outline_manage_search_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_manage_search_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap outline_monitor_heart_white_24dp {
             get {
                 object obj = ResourceManager.GetObject("outline_monitor_heart_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap outline_people_alt_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_people_alt_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap outline_person_outline_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_person_outline_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap outline_play_arrow_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_play_arrow_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap outline_play_circle_filled_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_play_circle_filled_white_24dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +373,79 @@ namespace MainForms.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap outline_work_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_work_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap outline_zoom_in_black_24dp {
             get {
                 object obj = ResourceManager.GetObject("outline_zoom_in_black_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 검색 {
+            get {
+                object obj = ResourceManager.GetObject("검색", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 닫기 {
+            get {
+                object obj = ResourceManager.GetObject("닫기", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 삭제 {
+            get {
+                object obj = ResourceManager.GetObject("삭제", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 저장 {
+            get {
+                object obj = ResourceManager.GetObject("저장", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 종료 {
+            get {
+                object obj = ResourceManager.GetObject("종료", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 추가 {
+            get {
+                object obj = ResourceManager.GetObject("추가", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -16,5 +16,10 @@ namespace PopupList
         {
             InitializeComponent();
         }
+
+        private void WorkSend_register_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

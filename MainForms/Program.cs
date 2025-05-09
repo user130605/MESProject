@@ -58,7 +58,7 @@ namespace MainForms
 
                 else if (List != null && (bool)List[0] == true && (string)List[2] == "prod")
                 {
-                    M04_WorkerForm M04 = new M04_WorkerForm(List[1].ToString());
+                    M04_WorkerForm M04 = new M04_WorkerForm(List[1].ToString(), List[3].ToString());
                     M04.ShowDialog();
 
                     //if (M04.Tag == null && !(bool)M04.Tag)

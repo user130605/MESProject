@@ -67,8 +67,37 @@
     <Compile Include="Facility_register.Designer.cs">
       <DependentUpon>Facility_register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Notice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notice.Designer.cs">
+      <DependentUpon>Notice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyKeyPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyKeyPad.Designer.cs">
+      <DependentUpon>MyKeyPad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Row_Select_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Row_Select_1.Designer.cs">
+      <DependentUpon>Row_Select_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeSelect.Designer.cs">
+      <DependentUpon>TimeSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkSend_edit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,15 +113,26 @@
     <EmbeddedResource Include="Facility_register.resx">
       <DependentUpon>Facility_register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Notice.resx">
+      <DependentUpon>Notice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyKeyPad.resx">
+      <DependentUpon>MyKeyPad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="TimeSelect.resx">
+      <DependentUpon>TimeSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkSend_edit.resx">
+      <DependentUpon>WorkSend_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkSend_register.resx">
+      <DependentUpon>WorkSend_register.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -112,6 +152,12 @@
       <Project>{9f86b3f1-c946-43d8-ba1b-2228b4e9dacf}</Project>
       <Name>Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-g778ceac32_1920.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-g778ceac32_19201.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

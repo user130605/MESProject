@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
     <Reference Include="Infragistics2.Shared.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
     <Reference Include="Infragistics2.Win.Misc.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics2.Win.v11.1, Version=11.1.20111.2071, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
@@ -48,12 +51,16 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FacilityManage.cs">
@@ -141,7 +148,6 @@
     <EmbeddedResource Include="PlanManage.resx">
       <DependentUpon>PlanManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -161,6 +167,90 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sub040602_top.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_check_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_add_business_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A장비.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B장비.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C장비.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_volume_up_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\습도.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\온도.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\진동.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\타이머.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\배경.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D장비.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E장비.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\고장.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\경고.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\경고-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\온도1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\소리.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\습도1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\진동1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\수정.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CNC장비.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\검사장비.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\용접장비.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\절삭장비.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\조립장비.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

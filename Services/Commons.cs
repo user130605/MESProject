@@ -26,5 +26,18 @@ using System.Threading.Tasks;
 
         public const string DbPath = "Data Source=222.235.141.8,1111; Initial Catalog=GNU23_02;User ID=GNU2302;Password=1234; database = GNU23_02";
         public static bool bloginFlag = false;
+
+        public static bool refresh = false;
+        public const string Sconnection__ = "Server = LAPTOP-TE1O05VG\\MSSQLSERVER07; Uid = sa; Pwd = 1234; database = AppDev;";
+
+        public static string DMFac, DMWorkP, DMName;        // 디폴트 설비 변수
+        
+        public static void DefaultM()
+        {
+            DMFac = "진주공장";
+            DMWorkP = "반제품작업장";
+            DMName = "CNC장비";
+        }
+        
     }
 }

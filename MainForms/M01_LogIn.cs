@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 using Services;
 
 
@@ -25,11 +26,12 @@ namespace MainForms
             InitializeComponent();
             BackColor = Color.FromArgb(53, 64, 86);
             //public bool bLoginFlag = false;
-        // Commons.bloginFlag = true;     정적변수를 이용한 로그인 결과 전달방법
+            // Commons.bloginFlag = true;     정적변수를 이용한 로그인 결과 전달방법
 
-        //   bLoginFlag = true;
+            //   bLoginFlag = true;
 
-    }
+
+        }
 
         private void btnLogin_Click_1(object sender = null, EventArgs e = null) //선택적 인자
         {
@@ -299,6 +301,7 @@ namespace MainForms
                 arrayList.Add(true);
                 arrayList.Add(dtTemp1.Rows[0]["u_name"].ToString());
                 arrayList.Add(dtTemp1.Rows[0]["u_dept"].ToString());
+                arrayList.Add(dtTemp1.Rows[0]["u_id"].ToString());
                 //위의 코드는 아래처럼 간단히 구현할수 있다.
                 //객체 이니셜라이징.
 
@@ -308,10 +311,13 @@ namespace MainForms
                 //    dtTemp.Rows[0]["USERNAME"].ToString()
                 //};
 
-                this.Tag = arrayList; 
+                this.Tag = arrayList;
 
                 //sUserName = dtTemp.Rows[0]["USERNAME"].ToString();
-                this.Close();
+
+
+                timer1.Start();
+                //this.Close();
             }
             catch (Exception ex)
             {
@@ -426,12 +432,12 @@ namespace MainForms
             //   bLoginFlag = true;
         }
 
-        private void txtUserId_Click(object sender, EventArgs e)
+        private void txtUserId__Click(object sender, EventArgs e)
         {
             txtUserId.Clear();
         }
 
-        private void txtPassword_Click(object sender, EventArgs e)
+        private void txtPassword__Click(object sender, EventArgs e)
         {
             txtPassword.Clear();
         }
@@ -448,6 +454,32 @@ namespace MainForms
                 btnLogin_Click_1();
                 }
             
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+            this.Size = new Size(360, 490);
+            Base_panel.Visible = true; //라인 panel
+            Time_panel.Visible = true; // 길어지는 panel
+
+            Time_panel.Width += 5; //길어지는 panel
+                if (Time_panel.Width >= 300)
+                {
+                    timer1.Stop();
+                    this.Close();
+                }
+            
+        }
+
+        private void txtUserId_Click(object sender, EventArgs e)
+        {
+            txtUserId.Clear();
+        }
+
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+            txtPassword.Clear();
         }
     }
     }

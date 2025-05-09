@@ -1,13 +1,16 @@
 ﻿using FormList;
+using PopupList;
 using Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -18,7 +21,10 @@ namespace MainForms
     public partial class M03_MainForm : MetroFramework.Forms.MetroForm
     {
         Thread thread_NowDate;
-
+        DataTable dtFlag = new DataTable();
+        SqlConnection sCon_2 = new SqlConnection(Commons.DbPath);
+        
+        
         public M03_MainForm()
         {
             InitializeComponent();
@@ -32,12 +38,15 @@ namespace MainForms
         #region <폼 load>
         private void M03_MainForm_Load(object sender, EventArgs e)
         {
+            
+
             //메인화면이 오픈이 될때.
             //1. timer 를 이용하여 스레드 생성
             //timNowDate.Enabled = true;
 
             //2. Thread 클래스를 통하여 스레드 생성
             //Thread 
+
             //프로세스 내부에서 생성되는 메인 처리 흐름과는 별개의 흐름(프로세스)
             //추가 함으로서 하나의 프로세스외에 여러가지 일을 동시에 수행하는 기능. (비동기)
 
@@ -54,6 +63,8 @@ namespace MainForms
 
             //추출한 클래스를 Form 형식으로 만든후 TabControl에 추가.
             tabMyTab.AddForm(welcome);
+
+            
         }
         #endregion
 
@@ -172,6 +183,7 @@ namespace MainForms
         {
             // 닫기 버튼을 클릭시 기능.
             if (tabMyTab.TabPages.Count == 0) return;
+            if (tabMyTab.SelectedTab.Name == "Hello") return;
             tabMyTab.SelectedTab.Dispose();
             
         }
@@ -333,10 +345,126 @@ namespace MainForms
         }
 
  
+        private void entire (object sender, EventArgs e)
+        {
+            if(tabMyTab.SelectedTab.Name == "Hello")
+            {
+                ((tabMyTab.SelectedTab.Controls[0]) as Hello).DoInquire();
+                return;
+            }
+
+            ToolStripButton TSB = sender as ToolStripButton;
+
+            BaseChildForm BCH = tabMyTab.SelectedTab.Controls[0] as BaseChildForm;
+            
+            switch(TSB.Tag.ToString())
+            {
+                case "SEARCH":
+                    BCH.DoInquire();
+                    break;
+                case "NEW":
+                    BCH.DoNew();
+                    break;
+                case "DELETE":
+                    BCH.DoDelete();
+                    break;
+                case "SAVE":
+                    BCH.DoSave();
+                    break;
+                
+            }
+        }
+
 
         private void tabMyTab_Click(object sender, EventArgs e)
         {
             stsFormName.Text = tabMyTab.SelectedTab.Text;
         }
+
+        private void 로그아웃ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult Result = MessageBox.Show("로그아웃 하시겠습니까?", "로그아웃", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+
+            if (Result == DialogResult.Yes)
+            {
+
+
+                this.Tag = false;
+                Application.Exit();
+            }
+
+            else
+                return;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                sCon_2.Open();
+                //그리드 데이터 초기화
+                dtFlag.Clear();
+
+                string sSqlSelect = "Select alarm from flag";
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sSqlSelect, sCon_2);
+                adapter.Fill(dtFlag);
+                //데이터베이스에서 받아온 결과를 그리드에 표현
+
+                //w_state = Convert.ToString(dtFlag.Rows[0]["alarm"]);
+                //label_classfiy.Text = Convert.ToString(dtTemp.Rows[0]["w_classify"]);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally { sCon_2.Close(); }
+
+            if (dtFlag.Rows[0]["alarm"].ToString() == "True")
+            {
+                timer1.Enabled = false;             //타이머 멈추고
+                Notice notice = new Notice();       //경고 띄우는 팝업창 인스턴스 생성
+                notice.ShowDialog();                //모달창으로 팝업띄우기
+                timer1.Enabled = (bool)notice.Tag;  //확인누르면 다시 타이머 돌아가도록.
+                
+
+            }
+            
+        }
+
+        private void endureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < tabMyTab.TabPages.Count; i++)
+            {
+                if (tabMyTab.TabPages[i].Name == "Hello")
+                {
+                    //탭페이지의 이름과 메뉴의 이름이 같다 (등록된페이지를 활성화)
+                    tabMyTab.SelectedTab = tabMyTab.TabPages[i];
+                    stsFormName.Text = tabMyTab.SelectedTab.Text;
+                    return;
+                }
+            }
+
+            //Assembly : 프로젝트 (dll) 파일의 클래스를 추출하고 관리할수 있는 클래스.
+
+            //DLL 파일이 있는 위치를 찾기.
+            //Application.StartupPath : 응용프로그램이 실행되는 위치  \\ = \   C:\windows\
+            Assembly assem = Assembly.LoadFrom(Application.StartupPath + "\\" + "FormList.DLL");
+
+            //Type : 파일형식으로 되어있는 클래스 유형을 winform 형식의 Form 클래스로 변경 시켜주는 클래스.
+            Type typeForm = assem.GetType("FormList." + "Hello", true);
+
+            //파일에서 추출한 클래스를 Form 형싱으로 변형.
+
+            Form ShowForm = (Form)Activator.CreateInstance(typeForm);
+
+            //추출한 클래스를 Form 형식으로 만든후 TabControl에 추가.
+            tabMyTab.AddForm(ShowForm);
+
+            stsFormName.Text = tabMyTab.SelectedTab.Text;
+        }
     }
-}
+    }
+
